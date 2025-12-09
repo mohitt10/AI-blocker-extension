@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name":"AI Blocker",
+    "version":"1.0",
+
+    "description":"The tool which blocks the AI websites when coding websites are open and vice-versa",
+
+    "icons" :{
+        "1024":"1.png"
+    },
+
+    "permissions": [
+        "tabs", 
+        "webRequest", 
+        "webRequestBlocking", 
+        "*://*codeforces.com/*", 
+        "*://*leetcode.com/*", 
+        "*://*codechef.com/*", 
+        "*://*chatgpt.com/*",
+        "*://*claude.ai/*",
+        "*://*deepseek.com/*"
+    ],
+    "browser_specific_settings":{
+        "gecko":{
+            "data_collection_permissions":{
+                "required":["none"],
+                "optional":[]
+            },
+            "id":"AIblocker@Mohit"
+        }
+    }
+}
