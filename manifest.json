@@ -6,27 +6,44 @@
     "description":"The tool which blocks the AI websites when coding websites are open and vice-versa",
 
     "icons" :{
-        "1024":"1.png"
+        "16":"icons/16.png",
+        "32":"icons/32.png",
+        "64":"icons/64.png",
+        "128":"icons/128.png",
+        "1024":"icons/1024.png"
     },
 
     "permissions": [
         "tabs", 
         "webRequest", 
         "webRequestBlocking", 
-        "*://*codeforces.com/*", 
-        "*://*leetcode.com/*", 
-        "*://*codechef.com/*", 
-        "*://*chatgpt.com/*",
-        "*://*claude.ai/*",
-        "*://*deepseek.com/*"
+        "*://codeforces.com/*", 
+        "*://leetcode.com/*", 
+        "*://codechef.com/*", 
+        "*://chatgpt.com/*",
+        "*://claude.ai/*",
+        "*://deepseek.com/*"
     ],
+    "background":{
+        "scripts":["redirectpage.js"]
+    },
     "browser_specific_settings":{
         "gecko":{
             "data_collection_permissions":{
                 "required":["none"],
                 "optional":[]
             },
-            "id":"AIblocker@Mohit"
+            "id":"AIblocker@mohitt10"
         }
+    },
+    "browser_action": {
+        "default_icon": {
+            "16":"icons/16.png",
+            "32":"icons/32.png",
+            "64":"icons/64.png",
+            "128":"icons/128.png",
+            "1024":"icons/1024.png"        
+        },
+        "default_popup": "popup/menu.html"
     }
 }
