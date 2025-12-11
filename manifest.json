@@ -18,16 +18,11 @@
     "permissions": [
         "tabs", 
         "webRequest", 
-        "webRequestBlocking", 
-        "*://codeforces.com/*", 
-        "*://leetcode.com/*", 
-        "*://codechef.com/*", 
-        "*://chatgpt.com/*",
-        "*://claude.ai/*",
-        "*://deepseek.com/*"
+        "webRequestBlocking",
+        "storage"
     ],
     "background":{
-        "scripts":["redirectpage.js"]
+        "scripts":["background.js"]
     },
     "browser_specific_settings":{
         "gecko":{
@@ -46,6 +41,7 @@
             "128":"icons/128.png",
             "1024":"icons/1024.png"        
         },
-        "default_popup": "popup/menu.html"
+        "default_popup": "popup/menu.html",
+        "browser_style":true
     }
 }

@@ -1,14 +1,13 @@
-// Contains the code for popup
-const checkbox = document.getElementById("check");
-const onText = document.getElementById("ontext");
-const offText = document.getElementById("offtext");
+document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById("check");
 
-checkbox.addEventListener("change", () => {
-    if (checkbox.checked) {
-        onText.classList.add("hidden");
-        offText.classList.remove("hidden");
-    } else {
-        onText.classList.remove("hidden");
-        offText.classList.add("hidden");
-    }
+    browser.storage.local.get("myCheckStatus").then(result => {
+        checkbox.checked = result.myCheckStatus ?? true;
+    });
+
+    checkbox.addEventListener("change", () => {
+        browser.storage.local.set({
+            myCheckStatus: checkbox.checked
+        });
+    });
 });

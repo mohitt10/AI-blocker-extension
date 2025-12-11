@@ -1,5 +1,5 @@
 *, *::before, *::after {
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -9,12 +9,11 @@ html {
     border: 3px solid #fff;
     padding: 12px;
     border-radius: 2px;
-    overflow: hidden;
 }
 
 body {
-    width:240px;
-    height:300px;
+    width:260px;
+    height: 200px;
     margin: 0;
     color:#fff;
 }
@@ -23,6 +22,10 @@ body {
     display:none;
 }
 #title{
+    display: flexbox;
+    justify-content: center;
+    align-items: baseline;
     color:rgb(255, 205, 88);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "BBH Hegarty", sans-serif;
+    font-size: xx-large;
 }
