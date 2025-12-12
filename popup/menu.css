@@ -3,29 +3,106 @@
 }
 
 html {
-    width: auto;
-    height: auto;
     background-color: rgb(5, 43, 100);
     border: 3px solid #fff;
-    padding: 12px;
-    border-radius: 2px;
+    border-radius: 8px;
+    padding-top: 2px;
+    overflow: hidden;
 }
 
 body {
-    width:260px;
-    height: 200px;
+    width: 260px;
+    height: 150px;
     margin: 0;
-    color:#fff;
+    padding: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
 
-.hidden {
-    display:none;
-}
-#title{
-    display: flexbox;
-    justify-content: center;
-    align-items: baseline;
-    color:rgb(255, 205, 88);
+/* Title */
+#title {
+    text-align: center;
+    color: rgb(255, 205, 88);
     font-family: "BBH Hegarty", sans-serif;
-    font-size: xx-large;
+    font-size: 28px;
+    margin: 0 0 20px 0;
+}
+
+/* Popup content wrapper */
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+/* Status and toggle row */
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.active {
+    font-size: 16px;
+}
+
+/* Toggle container */
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide default checkbox */
+#check {
+    display: none;
+}
+
+/* Toggle background */
+.button {
+    width: 60px;
+    height: 30px;
+    background-color: #d2d2d2;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+/* Toggle circle */
+.button::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.25s ease;
+}
+
+/* Checked: background turns green */
+#check:checked + .button {
+    background-color: green;
+}
+
+/* Move toggle circle */
+#check:checked + .button::before {
+    transform: translateX(30px);
+}
+
+/* Footer link */
+footer {
+    text-align: center;
+    width: 100%;
+}
+
+footer a {
+    color: rgb(255, 205, 88);
+    text-decoration: underline;
 }
